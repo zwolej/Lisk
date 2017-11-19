@@ -1,3 +1,37 @@
+
+
+// SASS Variables.
+$text: #fff;
+$text-nav: #007bff;
+$link: #e34234;
+$link-hover: #ba160c;
+$background: #00356B;
+
+
+//body {
+//  margin: 0;
+//  font: normal 75% Arial, Helvetica, sans-serif;
+//}
+//
+//canvas {
+//  display: block;
+//  vertical-align: bottom;
+//}
+//
+//#body {
+//  width: 100%;
+//  height: 100%;
+//  position: relative;//relative to be able for interaction with particles
+//  color: $text;
+//}
+
+//#particles-js {
+//  position: absolute;
+//  width: 100%;
+//  height: 100%;
+//  background: $background;
+//}
+
 body,
 html {
   height: 100%
@@ -21,39 +55,8 @@ html {
   z-index: -10;
   top: 0;
   left: 0;
+  background: $background;
 }
-
-// SASS Variables.
-$text: #fff;
-$text-nav: #007bff;
-$link: #e34234;
-$link-hover: #ba160c;
-$background: #00356B;
-
-
-body {
-  margin: 0;
-  font: normal 75% Arial, Helvetica, sans-serif;
-}
-
-canvas {
-  display: block;
-  vertical-align: bottom;
-}
-
-#body {
-  width: 100%;
-  height: 100%;
-  position: relative;//relative to be able for interaction with particles
-  color: $text;
-}
-
-//#particles-js {
-//  position: absolute;
-//  width: 100%;
-//  height: 100%;
-//  background: $background;
-//}
 
 .text {
   position: absolute;
@@ -232,14 +235,11 @@ header nav li:last-child{
   margin-right: 0;
 }
 
-
-
 @media (max-width: 1000px){
   header{
     padding: 20px 50px;
   }
 }
-
 
 @media (max-width: 700px){
   header{
@@ -250,8 +250,6 @@ header nav li:last-child{
     margin-bottom: 15px;
   }
 }
-
-
 
 /*----------------
  	Hero Section
@@ -321,8 +319,6 @@ header nav li:last-child{
 
 }
 
-
-
 /*--------------------
  	Our Work Section
 ---------------------*/
@@ -350,7 +346,6 @@ header nav li:last-child{
   flex-basis: 60%;
 }
 
-
 @media (max-width: 1000px){
 
   .our-work .grid li.small,
@@ -359,8 +354,6 @@ header nav li:last-child{
   }
 
 }
-
-
 
 /*----------------------
  	Features Section
@@ -405,7 +398,6 @@ header nav li:last-child{
 
 }
 
-
 @media (max-width: 600px){
 
   .features .grid li{
@@ -413,8 +405,6 @@ header nav li:last-child{
   }
 
 }
-
-
 
 /*--------------------
  	Reviews Section
@@ -455,8 +445,6 @@ header nav li:last-child{
 
 }
 
-
-
 /*---------------------
  	Contact Section
 ---------------------*/
@@ -487,7 +475,6 @@ header nav li:last-child{
   padding: 18px 42px;
 }
 
-
 @media (max-width: 800px){
 
   .contact form input{
@@ -496,9 +483,6 @@ header nav li:last-child{
   }
 
 }
-
-
-
 
 /*-------------
  	Footer
