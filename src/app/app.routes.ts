@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeRoutes } from './home/home.routes';
-import {HomeComponent} from "./home/home.component";
-import {ContactComponent} from "./contact/contact.component";
+import {HomeComponent} from './home/home.component';
+import {ContactComponent} from './contact/contact.component';
 
 export const AppRoutes: Routes = [
   {
@@ -21,7 +21,7 @@ export const AppRoutes: Routes = [
 
 export const routes: Routes = [
 
-  ...HomeRoutes, //why not working?
+  ...HomeRoutes, // why not working?
 
   // Must be last
   ...AppRoutes
