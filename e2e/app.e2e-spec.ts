@@ -1,6 +1,7 @@
 import { AppPage } from './app.po';
 
-describe('frontend App', () => {
+describe('MainPage', () => {
+
   let page: AppPage;
 
   beforeEach(() => {
@@ -9,6 +10,7 @@ describe('frontend App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('Responsive Flexbox Template');
   });
+
 });
