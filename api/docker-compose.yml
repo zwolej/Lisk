@@ -1,11 +1,8 @@
-mysql:
-  image: mysql
-  ports:
-    - "3306:3306"
+db:
+  image: postgres:9.6
   environment:
-    - MYSQL_USER=user
-    - MYSQL_PASSWORD=password
-    - MYSQL_DATABASE=backend
-    - MYSQL_RANDOM_ROOT_PASSWORD=true
-  volumes:
-    - "./conf.d:/etc/mysql/conf.d:ro"
+    POSTGRES_DB: backend
+    POSTGRES_USER: user
+    POSTGRES_PASSWORD: password
+  ports:
+    - "5432:5432"
