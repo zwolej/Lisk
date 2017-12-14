@@ -6,6 +6,7 @@ import { HomeModule } from './home/home.module';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { ContactModule } from './contact/contact.module';
+import { LiskService } from "./services/LiskService";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { ContactModule } from './contact/contact.module';
   exports: [
     RouterModule
   ],
-  providers: [],
+  providers: [LiskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
