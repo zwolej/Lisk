@@ -1,138 +1,64 @@
-<header>
-  <h2><a href="#">Website Logo</a></h2>
-  <nav>
-    <li><a href="#hero">Home</a></li>
-    <li><a [routerLink]="['/contact']" fragment="hero">Products</a></li>
-    <li><a href="#grid" target="_self">About</a></li>
-    <li><a href="#features" target="_self">Contacts</a></li>
-  </nav>
+<header class="content__title">
+  <h1>Dashboard</h1>
+  <small>Welcome to the Lisk tools stats page!</small>
+
+  <div class="actions">
+    <a href="" class="actions__item zmdi zmdi-trending-up"></a>
+    <a href="" class="actions__item zmdi zmdi-check-all"></a>
+
+    <div class="dropdown actions__item">
+      <i data-toggle="dropdown" class="zmdi zmdi-more-vert"></i>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a href="" class="dropdown-item">Refresh</a>
+        <a href="" class="dropdown-item">Manage Widgets</a>
+        <a href="" class="dropdown-item">Settings</a>
+      </div>
+    </div>
+  </div>
 </header>
 
-<section class="hero">
-  <div class="background-image" style="background-image: url(../assets/img/hero.jpg);"></div>
-  <h1>Responsive Flexbox Template</h1>
-  <h3>A freebie by Tutorialzine.</h3>
-  <a href="http://tutorialzine.com/2016/06/freebie-landing-page-template-with-flexbox/" class="btn">Download it Here</a>
-</section>
+<div class="row quick-stats">
+  <div class="col-sm-6 col-md-3">
+    <div class="quick-stats__item">
+      <div class="quick-stats__info">
+        <h2>987,459</h2>
+        <small>Total Leads Recieved</small>
+      </div>
 
-<section class="our-work">
-  <h3 class="title">Some of our work</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices. Morbi vitae pulvinar velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu.</p>
-  <hr>
+      <div class="quick-stats__chart peity-bar">6,4,8,6,5,6,7,8,3,5,9</div>
+    </div>
+  </div>
 
-  <ul class="grid">
-    <li class="small" style="background-image: url(../../assets/img/coast.jpg);"></li>
-    <li class="large" style="background-image: url(../../assets/img/island.jpg);"></li>
-    <li class="large" style="background-image: url(../assets/img/balloon.jpg);"></li>
-    <li class="small" style="background-image: url(../assets/img/mountain.jpg);"></li>
-  </ul>
-</section>
+  <div class="col-sm-6 col-md-3">
+    <div class="quick-stats__item">
+      <div class="quick-stats__info">
+        <h2>356,785K</h2>
+        <small>Total Website Clicks</small>
+      </div>
 
+      <div class="quick-stats__chart peity-bar">4,7,6,2,5,3,8,6,6,4,8</div>
+    </div>
+  </div>
 
-<section class="features">
-  <h3 class="title">Features and services</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices. Morbi vitae pulvinar velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu.</p>
-  <hr>
+  <div class="col-sm-6 col-md-3">
+    <div class="quick-stats__item">
+      <div class="quick-stats__info">
+        <h2>$58,778</h2>
+        <small>Total Sales Orders</small>
+      </div>
 
-  <ul class="grid">
-    <li>
-      <i class="fa fa-camera-retro"></i>
-      <h4>Photography</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices vitae pulvinar velit.</p>
-    </li>
-    <li>
-      <i class="fa fa-cubes"></i>
-      <h4>Web Development</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices vitae pulvinar velit.</p>
-    </li>
-    <li>
-      <i class="fa fa-newspaper-o"></i>
-      <h4>Content Editing</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices vitae pulvinar velit.</p>
-    </li>
-  </ul>
-</section>
+      <div class="quick-stats__chart peity-bar">9,4,6,5,6,4,5,7,9,3,6</div>
+    </div>
+  </div>
 
+  <div class="col-sm-6 col-md-3">
+    <div class="quick-stats__item">
+      <div class="quick-stats__info">
+        <h2>214</h2>
+        <small>Total Support Tickets</small>
+      </div>
 
-<section class="reviews">
-  <h3 class="title">What others say:</h3>
-
-  <p class="quote">Mauris sit amet mauris a arcu eleifend ultricies eget ut dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-  <p class="author">— Patrick Farrell</p>
-
-  <p class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices. Morbi vitae pulvinar velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu.</p>
-  <p class="author">— George Smith</p>
-
-  <p class="quote">Donec commodo dolor augue, vitae faucibus tortor tincidunt in. Aliquam vitae leo quis mi pulvinar ornare. Integer eu iaculis metus.</p>
-  <p class="author">— Kevin Blake</p>
-
-</section>
-
-<section class="contact">
-  <h3 class="title">Join our newsletter</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices. Morbi vitae pulvinar velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu.</p>
-  <hr>
-
-  <form>
-    <input type="email" placeholder="Email">
-    <a href="#" class="btn">Subscribe now</a>
-  </form>
-</section>
-
-<footer>
-  <ul>
-    <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-    <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-    <li><a href="#"><i class="fa fa-snapchat-square"></i></a></li>
-    <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-    <li><a href="#"><i class="fa fa-github-square"></i></a></li>
-  </ul>
-  <p>Made by <a href="http://tutorialzine.com/" target="_blank">tutorialzine</a>. images courtesy to <a href="http://unsplash.com/" target="_blank">unsplash</a>.</p>
-  <p>No attribution required. you can remove this footer.</p>
-</footer>
-
-
-<!--<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">-->
-  <!--<div class="container">-->
-    <!--<a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>-->
-    <!--<button class="navbar-toggler navbar-toggler-right" type="button"-->
-            <!--(click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"-->
-            <!--aria-label="Toggle navigation">-->
-      <!--Menu-->
-      <!--<i class="fa fa-bars"></i>-->
-    <!--</button>-->
-    <!--<div class="collapse navbar-collapse" [ngbCollapse]="isCollapsed">-->
-      <!--collapse: {{isCollapsed}}-->
-      <!--<ul class="navbar-nav text-uppercase ml-auto">-->
-        <!--<li class="nav-item">-->
-          <!--<a class="nav-link js-scroll-trigger" (click)="isCollapsed = !isCollapsed">toggle</a>-->
-        <!--</li>-->
-        <!--<li class="nav-item">-->
-          <!--<a class="nav-link js-scroll-trigger" href="#services">Services</a>-->
-        <!--</li>-->
-        <!--<li class="nav-item">-->
-          <!--<a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>-->
-        <!--</li>-->
-        <!--<li class="nav-item">-->
-          <!--<a class="nav-link js-scroll-trigger" href="#about">About</a>-->
-        <!--</li>-->
-        <!--<li class="nav-item">-->
-          <!--<a class="nav-link js-scroll-trigger" href="#team">Team</a>-->
-        <!--</li>-->
-        <!--<li class="nav-item">-->
-          <!--<a class="nav-link js-scroll-trigger" href="#contact">Contact</a>-->
-        <!--</li>-->
-      <!--</ul>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</nav>-->
-
-<!--<div class="container">-->
-  <!--<p>This is some text.</p>-->
-  <!--<p>This is another text.</p>-->
-  <!--<br/>-->
-  <!--<br/>-->
-  <!--<br/>-->
-  <!--<br/>-->
-  <!--<br/>-->
-<!--</div>-->
+      <div class="quick-stats__chart peity-bar">5,6,3,9,7,5,4,6,5,6,4</div>
+    </div>
+  </div>
+</div>

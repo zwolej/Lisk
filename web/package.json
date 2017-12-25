@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --stats-json",
-    "build:report": "webpack-bundle-analyzer dist/stats.json",
+    "build:report": "webpack-bundle-analyzer distWrapBootstrap/stats.json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

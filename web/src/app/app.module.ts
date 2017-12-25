@@ -7,22 +7,31 @@ import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { ContactModule } from './contact/contact.module';
 import { LiskService } from "./services/LiskService";
+import {WalletModule} from "./wallet/wallet.module";
+import { FormsModule } from '@angular/forms';
+import {ErrorService} from "./services/ErrorService";
+import {ErrorModule} from "./error/error.module";
+import {SidebarComponent} from "./template/sidebar.component";
 
 @NgModule({
   declarations: [
-    AppComponent,
+    SidebarComponent,
+    AppComponent
   ],
   imports: [
     HomeModule,
+    WalletModule,
     ContactModule,
+    ErrorModule,
     BrowserModule,
+    FormsModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(routes)
   ],
   exports: [
     RouterModule
   ],
-  providers: [LiskService],
+  providers: [LiskService, ErrorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

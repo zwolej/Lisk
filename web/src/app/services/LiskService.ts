@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import 'rxjs/add/operator/map'
+import {WalletResponse} from "./model/WalletDto";
+import {Router} from "@angular/router";
 
 declare var lisk: any;
 
@@ -8,7 +9,7 @@ export class LiskService {
 
   private api: any;
 
-  constructor() {
+  constructor(private router: Router) {
     const options = {
       ssl: false,
       node: '',
@@ -22,6 +23,12 @@ export class LiskService {
 
   public getActiveDelegates(callback: (n: any) => any): void {
     this.api.listActiveDelegates(5, (data) => {
+      callback(data);
+    });
+  }
+
+  public getAccount(address: string, callback: (n: WalletResponse) => any): void {
+    this.api.getAccount(address, (data: WalletResponse) => {
       callback(data);
     });
   }

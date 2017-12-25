@@ -1,0 +1,28 @@
+<header class="content__title">
+  <h1>Wallet Info</h1>
+</header>
+
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">{{addressData?.address}}</h4>
+
+    <table class="table table-responsive mb-0">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Address</th>
+          <th>Balance</th>
+          <th>Public key</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>{{addressData?.address}}</td>
+          <td>{{addressData?.balance}}</td>
+          <td>{{addressData?.publicKey}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
