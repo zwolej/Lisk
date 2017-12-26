@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {WalletComponent} from './wallet.component';
 import {RouterModule} from '@angular/router';
+import {WalletResolve} from "./wallet.resolve";
 
 @NgModule({
   declarations: [
@@ -10,6 +11,9 @@ import {RouterModule} from '@angular/router';
   imports: [
     BrowserModule,
     RouterModule
+  ],
+  providers: [
+    WalletResolve
   ]
 })
 export class WalletModule { }

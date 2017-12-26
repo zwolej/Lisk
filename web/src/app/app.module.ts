@@ -11,11 +11,11 @@ import {WalletModule} from "./wallet/wallet.module";
 import { FormsModule } from '@angular/forms';
 import {ErrorService} from "./services/ErrorService";
 import {ErrorModule} from "./error/error.module";
-import {SidebarComponent} from "./template/sidebar.component";
+import {NavigationComponent} from "./template/navigation.component";
 
 @NgModule({
   declarations: [
-    SidebarComponent,
+    NavigationComponent,
     AppComponent
   ],
   imports: [

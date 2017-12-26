@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import {WalletResponse} from "./model/WalletDto";
+import {WalletResponse} from "./model/WalletResponse";
 import {Router} from "@angular/router";
+import {VotedDelegateResponse} from "./model/VotedDelegateResponse";
 
 declare var lisk: any;
 
@@ -29,6 +30,12 @@ export class LiskService {
 
   public getAccount(address: string, callback: (n: WalletResponse) => any): void {
     this.api.getAccount(address, (data: WalletResponse) => {
+      callback(data);
+    });
+  }
+
+  public getAccountVotes(address: string, callback: (n: VotedDelegateResponse) => any): void {
+    this.api.listVotes(address, (data: VotedDelegateResponse) => {
       callback(data);
     });
   }

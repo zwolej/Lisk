@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import { LiskService } from "./services/LiskService";
-import {Router} from '@angular/router';
+import {NavigationEnd, Router} from '@angular/router';
 
 declare var particlesJS: any;
 
@@ -8,13 +8,17 @@ declare var particlesJS: any;
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
-export class  AppComponent implements OnInit {
+export class AppComponent implements OnInit {
 
   walletAddress: string;
-  title = 'app';
   delegates: any;
 
   constructor(private liskService: LiskService, private router: Router) {
+    router.events.forEach((event) => {
+      if(event instanceof NavigationEnd) {
+        this.loadScript();
+      }
+    });
   }
 
   ngOnInit() {
@@ -32,4 +36,15 @@ export class  AppComponent implements OnInit {
     }
   }
 
+  public loadScript() {
+    const old = document.getElementById("AppJqueryScript")
+    if (old) {
+      old.remove()
+    }
+    const appScript = document.createElement("script");
+    appScript.setAttribute("id", "AppJqueryScript");
+    appScript.setAttribute("src", 'assets/wrap-bootstrap/js/app.min.js');
+    appScript.setAttribute("type", 'text/javascript');
+    document.body.appendChild(appScript);
+  }
 }
