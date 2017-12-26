@@ -1,27 +1,73 @@
 <div class="content__inner content__inner--sm">
-  <form class="card">
-    <div class="card-body">
-      <h4 class="card-title">Write to us</h4>
-      <h6 class="card-subtitle">Aeneanquam ellentesque ornare lacinia</h6>
+  <div class="messages">
+    <div class="messages__body">
+      <div class="messages__header">
+        <div class="toolbar toolbar--inner mb-0">
+          <div class="toolbar__label">Messages</div>
 
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Full Name">
-        <i class="form-group__bar"></i>
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Email Address">
-        <i class="form-group__bar"></i>
-      </div>
-      <div class="form-group">
-        <textarea class="form-control" placeholder="Message" style="overflow: hidden; word-wrap: break-word; height: 49px;"></textarea>
-        <i class="form-group__bar"></i>
+          <div class="actions toolbar__actions">
+            <i class="actions__item zmdi zmdi-search" data-sa-action="toolbar-search-open"></i>
+            <a href="" class="actions__item zmdi zmdi-time"></a>
+            <a href="" class="actions__item zmdi zmdi-info-outline"></a>
+            <div class="dropdown actions__item">
+              <i class="actions__item zmdi zmdi-more-vert" data-toggle="dropdown"></i>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a href="" class="dropdown-item">Refresh</a>
+                <a href="" class="dropdown-item">Delete all</a>
+                <a href="" class="dropdown-item">Settings</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="toolbar__search">
+            <input type="text" placeholder="Search...">
+            <i class="toolbar__search__close zmdi zmdi-long-arrow-left" data-sa-action="toolbar-search-close"></i>
+          </div>
+        </div>
       </div>
 
-      <p class="mb-5">By sending us your information, you agree to Root’s Terms of Use &amp; Privacy Policy.</p>
+      <div class="messages__content">
+        <div class="scrollbar-inner">
+          <div class="messages__item">
+            <div class="messages__details">
+              <p>Quisque consequat arcu eget odio cursus, ut tempor arcu vestibulum. Etiam ex arcu, porta a urna non, lacinia pellentesque orci. Proin semper sagittis erat, eget condimentum sapien viverra et. Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis.</p>
+              <small><i class="zmdi zmdi-time"></i> 20/04/2017 at 09:00 by <b>Marek</b></small>
+            </div>
+          </div>
 
-      <div class="text-right">
-        <button class="btn btn-light">Submit</button>
+          <div class="messages__item messages__item--right">
+            <div class="messages__details">
+              <p>Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis.</p>
+              <small><i class="zmdi zmdi-time"></i> 20/04/2017 at 09:10 by <b>Andrzej</b></small>
+            </div>
+          </div>
+
+          <div class="messages__item">
+            <div class="messages__details">
+              <p>Etiam ex arcumentum</p>
+              <small><i class="zmdi zmdi-time"></i> 20/04/2017 at 09:11 by <b>Jozek</b></small>
+            </div>
+          </div>
+
+          <div class="messages__item messages__item--right">
+            <div class="messages__details">
+              <p>Etiam nec facilisis lacus. Nulla imperdiet augue ullamcorper dui ullamcorper, eu laoreet sem consectetur. Aenean et ligula risus. Praesent sed posuere sem. Cum sociis natoque penatibus et magnis dis parturient montes</p>
+              <small><i class="zmdi zmdi-time"></i> 20/04/2017 at 09:15 by <b>Franek</b></small>
+            </div>
+          </div>
+
+          <div class="messages__item">
+            <div class="messages__details">
+              <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
+              <small><i class="zmdi zmdi-time"></i> 20/04/2017 at 09:22 by <b>Zenek</b></small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="messages__reply">
+        <textarea class="messages__reply__text" placeholder="Type a message..."></textarea>
       </div>
     </div>
-  </form>
+  </div>
 </div>
