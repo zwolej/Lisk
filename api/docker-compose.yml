@@ -1,8 +1,21 @@
 db:
-  image: postgres:9.6
+  image: mariadb:10.3.3
   environment:
-    POSTGRES_DB: backend
-    POSTGRES_USER: user
-    POSTGRES_PASSWORD: password
+    MYSQL_ROOT_PASSWORD: lisk6532root
+    MYSQL_USER: lisk
+    MYSQL_PASSWORD: lisk6532
+    MYSQL_DATABASE: lisk
   ports:
-    - "5432:5432"
+    - 8182:3306
+phpmyadmin:
+  image: phpmyadmin/phpmyadmin:4.7.7-1
+  links:
+    - db
+  environment:
+    PMA_HOST: db
+    PMA_PORT: 3306
+    MYSQL_ROOT_PASSWORD: lisk6532root
+    MYSQL_USER: lisk
+    MYSQL_PASSWORD: lisk6532
+  ports:
+    - 8181:80
