@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
-import { RouterModule } from '@angular/router';
+import {RouteReuseStrategy, RouterModule} from '@angular/router';
 import { routes } from './app.routes';
 import { ContactModule } from './contact/contact.module';
 import { LiskService } from "./services/LiskService";
@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import {ErrorService} from "./services/ErrorService";
 import {ErrorModule} from "./error/error.module";
 import {NavigationComponent} from "./template/navigation.component";
+import {CustomReuseStrategy} from "./app.reuse.strategy";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,11 @@ import {NavigationComponent} from "./template/navigation.component";
   ],
   providers: [
     LiskService,
-    ErrorService
+    ErrorService,
+    {
+      provide: RouteReuseStrategy,
+      useClass: CustomReuseStrategy
+    }
   ],
   bootstrap: [AppComponent]
 })
