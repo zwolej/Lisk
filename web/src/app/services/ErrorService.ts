@@ -10,7 +10,7 @@ export class ErrorService {
   constructor(private router: Router) { }
 
   public redirectToErrorPage(error: ErrorResponse): void {
-    console.log("app error", error);
+    console.log("ErrorService naviagte to error page with msg", error);
     this.error = error;
     this.router.navigate(['error']);
   }

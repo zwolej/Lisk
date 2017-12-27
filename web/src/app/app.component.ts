@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    // this.allowToRefreshSameRouteOnNavigation();
     particlesJS.load('particles-js', 'assets/particles.json', null);
     this.liskService.getActiveDelegates((response: any) => {
       this.delegates = response;
@@ -36,8 +37,8 @@ export class AppComponent implements OnInit {
     }
   }
 
-  public loadScript() {
-    const old = document.getElementById("AppJqueryScript")
+  private loadScript() {
+    const old = document.getElementById("AppJqueryScript");
     if (old) {
       old.remove()
     }
@@ -46,5 +47,18 @@ export class AppComponent implements OnInit {
     appScript.setAttribute("src", 'assets/wrap-bootstrap/js/app.min.js');
     appScript.setAttribute("type", 'text/javascript');
     document.body.appendChild(appScript);
+  }
+
+  private allowToRefreshSameRouteOnNavigation() {
+    this.router.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    };
+
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.router.navigated = false;
+        window.scroll(0, 0);
+      }
+    });
   }
 }

@@ -1,13 +1,15 @@
 import { WalletComponent } from './wallet.component';
 import { Routes } from '@angular/router';
-import {WalletResolve} from "./wallet.resolve";
+import { WalletBasicResolve } from "./wallet.basic.resolve";
+import { WalletVoteResolve } from "./wallet.votes.resolve";
 
 export const WalletRoutes: Routes = [
   {
     path: 'wallet/:address',
     component: WalletComponent,
     resolve: {
-      dupa: WalletResolve
+      wallet: WalletBasicResolve,
+      votes: WalletVoteResolve
     },
   }
 ];

@@ -33,7 +33,7 @@
     <h6 class="card-subtitle">List of votes placed by a given address</h6>
 
     <div class="table-responsive">
-      <table id="data-table" class="table" *ngIf="addressData?.votes?.length > 0">
+      <table [attr.id]="'data-table'" class="table">
         <thead>
           <tr>
             <th>Username</th>

@@ -31,7 +31,10 @@ import {NavigationComponent} from "./template/navigation.component";
   exports: [
     RouterModule
   ],
-  providers: [LiskService, ErrorService],
+  providers: [
+    LiskService,
+    ErrorService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
