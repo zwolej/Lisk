@@ -6,7 +6,7 @@ db:
     MYSQL_PASSWORD: lisk6532
     MYSQL_DATABASE: lisk
   ports:
-    - 8182:3306
+    - 3306:3306
 phpmyadmin:
   image: phpmyadmin/phpmyadmin:4.7.7-1
   links:

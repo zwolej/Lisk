@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
     event.preventDefault();
 
     if (this.walletAddress) {
-      this.router.navigate(['wallet/' + this.walletAddress]);
+      this.router.navigate(['wallet/', this.walletAddress]);
     }
   }
 

@@ -1,0 +1,21 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="hbartzwo (generated)" id="1514474173165-1">
+        <insert tableName="delegate">
+            <column name="id" valueNumeric="1"/>
+            <column name="address" value="address"/>
+            <column name="pool_share" valueNumeric="80"/>
+            <column name="public_key" value="publickey"/>
+            <column name="username" value="username"/>
+            <column name="website" value="http://username.com"/>
+        </insert>
+        <insert tableName="delegate">
+            <column name="id" valueNumeric="2"/>
+            <column name="address" value="address2"/>
+            <column name="pool_share" valueNumeric="25"/>
+            <column name="public_key" value="publickey2"/>
+            <column name="username" value="username2"/>
+            <column name="website" value="http://username2.com"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
