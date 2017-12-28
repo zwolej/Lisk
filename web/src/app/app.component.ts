@@ -3,6 +3,7 @@ import { LiskService } from "./services/LiskService";
 import {NavigationEnd, Router, ActivationStart, ActivationEnd} from '@angular/router';
 
 declare var particlesJS: any;
+declare var $: any;
 
 @Component({
   selector: 'app-root',
@@ -15,9 +16,11 @@ export class AppComponent implements OnInit {
   constructor(private liskService: LiskService, private router: Router) {
     router.events.forEach((event) => {
       if (event instanceof ActivationStart) {
-        // $(".page-loader").fadeIn(); //LOADING BAR ON
+        // $(".page-loader").fadeIn(); //LOADING BAR ON NAVIGATION
       } else if(event instanceof ActivationEnd) {
-        // $(".page-loader").fadeOut(); //LOADING BAR OFF
+        setTimeout(() => {
+          $(".page-loader").fadeOut();
+        }, 500);
       } else if(event instanceof NavigationEnd) {
         const self = this;
         setTimeout(() => {
