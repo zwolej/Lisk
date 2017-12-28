@@ -1,6 +1,6 @@
-import {AfterViewInit, Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, OnInit } from '@angular/core';
 import { LiskService } from "./services/LiskService";
-import {NavigationEnd, Router} from '@angular/router';
+import {NavigationEnd, Router, ActivationStart, ActivationEnd} from '@angular/router';
 
 declare var particlesJS: any;
 
@@ -11,22 +11,25 @@ declare var particlesJS: any;
 export class AppComponent implements OnInit {
 
   walletAddress: string;
-  delegates: any;
 
   constructor(private liskService: LiskService, private router: Router) {
     router.events.forEach((event) => {
-      if(event instanceof NavigationEnd) {
-        this.loadScript();
+      if (event instanceof ActivationStart) {
+        // $(".page-loader").fadeIn(); //LOADING BAR ON
+      } else if(event instanceof ActivationEnd) {
+        // $(".page-loader").fadeOut(); //LOADING BAR OFF
+      } else if(event instanceof NavigationEnd) {
+        const self = this;
+        setTimeout(() => {
+          self.loadScript();
+        }, 100);
       }
     });
   }
 
   ngOnInit() {
-    // this.allowToRefreshSameRouteOnNavigation();
+    this.allowToRefreshSameRouteOnNavigation();
     particlesJS.load('particles-js', 'assets/particles.json', null);
-    this.liskService.getActiveDelegates((response: any) => {
-      this.delegates = response;
-    });
   }
 
   searchForWallet(event: any) {

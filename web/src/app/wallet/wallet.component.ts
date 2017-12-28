@@ -13,8 +13,8 @@ export class WalletComponent {
 
   constructor(private liskService: LiskService, private route: ActivatedRoute) {
     route.params.subscribe(() => {
-      this.addressData = this.route.snapshot.data['wallet'];
-      this.addressData.votes = this.route.snapshot.data['votes'];
+      this.addressData = this.route.snapshot.data['info'][0];
+      this.addressData.votes = this.route.snapshot.data['info'][1];
     });
   }
 
