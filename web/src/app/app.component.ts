@@ -1,5 +1,4 @@
 import {Component, OnInit } from '@angular/core';
-import { LiskService } from "./services/LiskService";
 import {NavigationEnd, Router, ActivationStart, ActivationEnd} from '@angular/router';
 
 declare var particlesJS: any;
@@ -13,7 +12,7 @@ export class AppComponent implements OnInit {
 
   walletAddress: string;
 
-  constructor(private liskService: LiskService, private router: Router) {
+  constructor(private router: Router) {
     router.events.forEach((event) => {
       if (event instanceof ActivationStart) {
         // $(".page-loader").fadeIn(); //LOADING BAR ON NAVIGATION

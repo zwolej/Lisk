@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">List of first 101 delegates</h4>
+    <h6 class="card-subtitle">List of delegates ordered by rank</h6>
+
+    <div class="table-responsive">
+      <table [attr.id]="'data-table'" class="table">
+        <thead>
+        <tr>
+          <th>Username</th>
+          <th>Rank</th>
+          <th>Rate</th>
+          <th>Address</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of delegates">
+          <td>{{item.username}}</td>
+          <td>{{item.rank}}</td>
+          <td>{{item.rate}}</td>
+          <td>{{item.address}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

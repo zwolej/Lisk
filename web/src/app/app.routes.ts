@@ -3,6 +3,7 @@ import { HomeRoutes } from './home/home.routes';
 import {ContactRoutes} from "./contact/contact.routes";
 import {WalletRoutes} from "./wallet/wallet.routes";
 import {ErrorRoutes} from "./error/error.routes";
+import { DelegatesRoutes } from "./delegates/delegates.routes";
 
 export const AppRoutes: Routes = [
   {
@@ -16,6 +17,7 @@ export const AppRoutes: Routes = [
       ...HomeRoutes,
       ...WalletRoutes,
       ...ContactRoutes,
+      ...DelegatesRoutes,
 // ERROR ON END
       ...ErrorRoutes,
     ],

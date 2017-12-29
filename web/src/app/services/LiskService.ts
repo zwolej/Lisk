@@ -22,8 +22,8 @@ export class LiskService {
     this.api = lisk.api(options);
   }
 
-  public getActiveDelegates(callback: (n: any) => any): void {
-    this.api.listActiveDelegates(5, (data) => {
+  public getDelegates(callback: (n: any) => any): void {
+    this.api.listActiveDelegates(101, (data) => {
       callback(data);
     });
   }

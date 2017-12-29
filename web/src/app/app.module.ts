@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import {ErrorService} from "./services/ErrorService";
 import {ErrorModule} from "./error/error.module";
 import {NavigationComponent} from "./template/navigation.component";
+import { DelegatesModule } from "./delegates/delegates.module";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import {NavigationComponent} from "./template/navigation.component";
     HomeModule,
     WalletModule,
     ContactModule,
+    DelegatesModule,
     ErrorModule,
     BrowserModule,
     FormsModule,

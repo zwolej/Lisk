@@ -3,9 +3,8 @@ package io.lisk.Entity;
 import lombok.Getter;
 import org.hibernate.validator.constraints.NotBlank;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -13,15 +12,12 @@ import javax.persistence.Id;
 public class Delegate {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private Long id;
+    private String address;
     @NotBlank
+    @Column(unique = true)
     private String username;
     @NotBlank
-    private String address;
-	@NotBlank
-	private int poolShare;
-    private String publicKey;
+    private int poolShare;
     private String website;
 
 }
