@@ -13,6 +13,8 @@ import {ErrorService} from "./services/ErrorService";
 import {ErrorModule} from "./error/error.module";
 import {NavigationComponent} from "./template/navigation.component";
 import { DelegatesModule } from "./delegates/delegates.module";
+import { DelegatesService } from "./services/DelegatesService";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { DelegatesModule } from "./delegates/delegates.module";
     DelegatesModule,
     ErrorModule,
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(routes)
@@ -35,6 +38,7 @@ import { DelegatesModule } from "./delegates/delegates.module";
   ],
   providers: [
     LiskService,
+    DelegatesService,
     ErrorService
   ],
   bootstrap: [AppComponent]
