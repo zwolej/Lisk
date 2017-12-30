@@ -1,8 +1,8 @@
 import {LiskResponse} from "./LiskResponse";
-import {VoteDto} from "./VoteDto";
+import {DelegateDto} from "./DelegateDto";
 
 export class VotedDelegateResponse extends LiskResponse {
 
-  delegates: VoteDto[];
+  delegates: DelegateDto[];
 
 }

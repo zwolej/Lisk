@@ -1,6 +1,6 @@
 import {LiskResponse} from "./LiskResponse";
 
-export class VoteDto extends LiskResponse {
+export class DelegateDto extends LiskResponse {
 
   address: string;
   username: string;

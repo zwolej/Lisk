@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Router} from "@angular/router";
-import {ErrorResponse} from "./model/ErrorResponse";
+import {ErrorResponse} from "./lisk/model/ErrorResponse";
 
 @Injectable()
 export class ErrorService {
