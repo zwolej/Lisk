@@ -13,8 +13,8 @@ import java.util.Collection;
 @RequestMapping("api")
 public class DelegateController {
 
-	@Autowired
-	private DelegateRepository delegateRepository;
+    @Autowired
+    private DelegateRepository delegateRepository;
 
     @PostMapping("delegate")
     public DelegateEntity createDelegate(@Valid @RequestBody DelegateEntity delegateEntity) {
@@ -24,7 +24,7 @@ public class DelegateController {
     @GetMapping("delegate/{id}")
     public ResponseEntity<DelegateEntity> getDelegateById(@PathVariable(value = "id") Long delegateId) {
         DelegateEntity delegateEntity = delegateRepository.findOne(delegateId);
-        if(delegateEntity == null) {
+        if (delegateEntity == null) {
             return ResponseEntity.notFound().build();
         }
 
@@ -34,7 +34,7 @@ public class DelegateController {
     @DeleteMapping("/delegate/{id}")
     public ResponseEntity<DelegateEntity> deleteDelegate(@PathVariable(value = "id") Long delegateId) {
         DelegateEntity delegateEntity = delegateRepository.findOne(delegateId);
-        if(delegateEntity == null) {
+        if (delegateEntity == null) {
             return ResponseEntity.notFound().build();
         }
 

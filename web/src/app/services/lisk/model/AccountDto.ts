@@ -1,4 +1,4 @@
-import {DelegateDto} from "./DelegateDto";
+import { DelegateDto } from './DelegateDto';
 
 export class AccountDto {
 

@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import {WalletResponse} from "./lisk/model/WalletResponse";
-import {Router} from "@angular/router";
-import {VotedDelegateResponse} from "./lisk/model/VotedDelegateResponse";
-import {Observer} from "rxjs/Observer";
-import {Observable} from "rxjs/Observable";
-import {ErrorService} from "./ErrorService";
-import {DelegatesInfoResponse} from "./lisk/model/DelegatesInfoResponse";
-import {LiskResponse} from "./lisk/model/LiskResponse";
-import 'rxjs/add/operator/map'
+import { WalletResponse } from './lisk/model/WalletResponse';
+import { Router } from '@angular/router';
+import { VotedDelegateResponse } from './lisk/model/VotedDelegateResponse';
+import { Observer } from 'rxjs/Observer';
+import { Observable } from 'rxjs/Observable';
+import { ErrorService } from './ErrorService';
+import { DelegatesInfoResponse } from './lisk/model/DelegatesInfoResponse';
+import { LiskResponse } from './lisk/model/LiskResponse';
+import 'rxjs/add/operator/map';
 
 declare var lisk: any;
 
@@ -47,7 +47,7 @@ export class LiskService {
     });
   }
 
-  private handleLiskResponse<T extends LiskResponse>(observer: Observer<T>)  {
+  private handleLiskResponse<T extends LiskResponse>(observer: Observer<T>) {
     return (response: T) => {
       if (!response.success) {
         observer.error(response.error);

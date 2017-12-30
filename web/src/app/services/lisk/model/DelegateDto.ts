@@ -1,4 +1,4 @@
-import {LiskResponse} from "./LiskResponse";
+import { LiskResponse } from './LiskResponse';
 
 export class DelegateDto extends LiskResponse {
 

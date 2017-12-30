@@ -1,5 +1,5 @@
-import {LiskResponse} from "./LiskResponse";
-import {AccountDto} from "./AccountDto";
+import { LiskResponse } from './LiskResponse';
+import { AccountDto } from './AccountDto';
 
 export class WalletResponse extends LiskResponse {
 

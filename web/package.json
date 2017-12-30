@@ -7,7 +7,7 @@
     "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build --prod",
     "report": "ng build --prod --stats-json && webpack-bundle-analyzer dist/stats.json",
-    "test": "ng test",
+    "test": "ng test -sm=false",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },

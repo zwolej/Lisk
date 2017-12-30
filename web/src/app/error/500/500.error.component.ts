@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {ErrorService} from "../../services/ErrorService";
+import { Component } from '@angular/core';
+import { ErrorService } from '../../services/ErrorService';
 
 @Component({
   templateUrl: './500.error.component.html'
