@@ -22,8 +22,8 @@ export class LiskService {
       ssl: false,
       node: '',
       randomPeer: true,
-      testnet: false,
-      port: '8000',
+      testnet: true,
+      port: '7000',
       bannedPeers: [],
     };
     this.api = lisk.api(options);

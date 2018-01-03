@@ -9,7 +9,7 @@
         <tr>
           <th>Username</th>
           <th>Rank</th>
-          <th>Rate</th>
+          <th>Pool Share</th>
           <th>Address</th>
           <th>Website</th>
         </tr>
@@ -18,9 +18,9 @@
         <tr *ngFor="let item of delegates">
           <td>{{item.username}}</td>
           <td>{{item.rank}}</td>
-          <td>{{item.rate}}</td>
+          <td>{{item.poolShare ? item.poolShare + '%' : ''}}</td>
           <td>{{item.address}}</td>
-          <td>{{item.website}}</td>
+          <td><a *ngIf="item.website" href="{{item.website}}" target="_blank">{{item.website}}</a></td>
         </tr>
         </tbody>
       </table>

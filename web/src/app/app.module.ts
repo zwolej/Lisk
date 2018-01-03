@@ -15,6 +15,8 @@ import { NavigationComponent } from './template/navigation.component';
 import { DelegatesModule } from './delegates/delegates.module';
 import { DelegatesService } from './services/DelegatesService';
 import { HttpClientModule } from '@angular/common/http';
+import { RecaptchaModule } from 'ng-recaptcha';
+import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FormsModule,
     NgbModule.forRoot(),
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    RecaptchaModule.forRoot(),
+    RecaptchaFormsModule,
   ],
   exports: [
     RouterModule
