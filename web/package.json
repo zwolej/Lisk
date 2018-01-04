@@ -4,10 +4,10 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build --prod",
     "report": "ng build --prod --stats-json && webpack-bundle-analyzer dist/stats.json",
-    "test": "ng test",
+    "test": "ng test -sm=false",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -23,9 +23,12 @@
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.5",
+    "@types/lodash-es": "^4.17.0",
     "bootstrap": "^4.0.0-beta.2",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
+    "lodash-es": "^4.17.4",
+    "ng-recaptcha": "^3.0.3",
     "particles.js": "^2.0.0",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"

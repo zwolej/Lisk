@@ -30,14 +30,18 @@
         <div class="scrollbar-inner">
           <div class="messages__item">
             <div class="messages__details">
-              <p>Quisque consequat arcu eget odio cursus, ut tempor arcu vestibulum. Etiam ex arcu, porta a urna non, lacinia pellentesque orci. Proin semper sagittis erat, eget condimentum sapien viverra et. Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis.</p>
+              <p>Quisque consequat arcu eget odio cursus, ut tempor arcu vestibulum. Etiam ex arcu, porta a urna non,
+                lacinia pellentesque orci. Proin semper sagittis erat, eget condimentum sapien viverra et. Mauris
+                volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar
+                lobortis.</p>
               <small><i class="zmdi zmdi-time"></i> 20/04/2017 at 09:00 by <b>Marek</b></small>
             </div>
           </div>
 
           <div class="messages__item messages__item--right">
             <div class="messages__details">
-              <p>Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis.</p>
+              <p>Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar
+                lobortis.</p>
               <small><i class="zmdi zmdi-time"></i> 20/04/2017 at 09:10 by <b>Andrzej</b></small>
             </div>
           </div>
@@ -51,7 +55,9 @@
 
           <div class="messages__item messages__item--right">
             <div class="messages__details">
-              <p>Etiam nec facilisis lacus. Nulla imperdiet augue ullamcorper dui ullamcorper, eu laoreet sem consectetur. Aenean et ligula risus. Praesent sed posuere sem. Cum sociis natoque penatibus et magnis dis parturient montes</p>
+              <p>Etiam nec facilisis lacus. Nulla imperdiet augue ullamcorper dui ullamcorper, eu laoreet sem
+                consectetur. Aenean et ligula risus. Praesent sed posuere sem. Cum sociis natoque penatibus et magnis
+                dis parturient montes</p>
               <small><i class="zmdi zmdi-time"></i> 20/04/2017 at 09:15 by <b>Franek</b></small>
             </div>
           </div>
@@ -66,6 +72,17 @@
       </div>
 
       <div class="messages__reply">
+        <!--<form #declarativeForm="ngForm">-->
+          <!--<re-captcha-->
+            <!--[(ngModel)]="declarativeFormCaptchaValue"-->
+            <!--name="captcha"-->
+            <!--required-->
+          <!--&gt;</re-captcha>-->
+          <!--<button [disabled]="!declarativeForm.valid">Submit</button>-->
+        <!--</form>-->
+
+        <re-captcha (resolved)="resolved($event)" siteKey="YOUR_SITE_KEY"></re-captcha>
+
         <textarea class="messages__reply__text" placeholder="Type a message..."></textarea>
       </div>
     </div>

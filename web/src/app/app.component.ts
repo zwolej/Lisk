@@ -1,5 +1,5 @@
-import {Component, OnInit } from '@angular/core';
-import {NavigationEnd, Router, ActivationStart, ActivationEnd} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivationEnd, ActivationStart, NavigationEnd, Router } from '@angular/router';
 
 declare var particlesJS: any;
 declare var $: any;
@@ -16,11 +16,11 @@ export class AppComponent implements OnInit {
     router.events.forEach((event) => {
       if (event instanceof ActivationStart) {
         // $(".page-loader").fadeIn(); //LOADING BAR ON NAVIGATION
-      } else if(event instanceof ActivationEnd) {
+      } else if (event instanceof ActivationEnd) {
         setTimeout(() => {
-          $(".page-loader").fadeOut();
+          $('.page-loader').fadeOut();
         }, 500);
-      } else if(event instanceof NavigationEnd) {
+      } else if (event instanceof NavigationEnd) {
         const self = this;
         setTimeout(() => {
           self.loadScript();
@@ -43,14 +43,14 @@ export class AppComponent implements OnInit {
   }
 
   private loadScript() {
-    const old = document.getElementById("AppJqueryScript");
+    const old = document.getElementById('AppJqueryScript');
     if (old) {
-      old.remove()
+      old.remove();
     }
-    const appScript = document.createElement("script");
-    appScript.setAttribute("id", "AppJqueryScript");
-    appScript.setAttribute("src", 'assets/wrap-bootstrap/js/app.min.js');
-    appScript.setAttribute("type", 'text/javascript');
+    const appScript = document.createElement('script');
+    appScript.setAttribute('id', 'AppJqueryScript');
+    appScript.setAttribute('src', 'assets/wrap-bootstrap/js/app.min.js');
+    appScript.setAttribute('type', 'text/javascript');
     document.body.appendChild(appScript);
   }
 

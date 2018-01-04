@@ -1,6 +1,6 @@
 package io.lisk.Controller;
 
-import io.lisk.Entity.Delegate;
+import io.lisk.Entity.DelegateEntity;
 import io.lisk.Repository.DelegateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -13,37 +13,37 @@ import java.util.Collection;
 @RequestMapping("api")
 public class DelegateController {
 
-	@Autowired
-	private DelegateRepository delegateRepository;
+    @Autowired
+    private DelegateRepository delegateRepository;
 
     @PostMapping("delegate")
-    public Delegate createDelegate(@Valid @RequestBody Delegate delegate) {
-        return delegateRepository.save(delegate);
+    public DelegateEntity createDelegate(@Valid @RequestBody DelegateEntity delegateEntity) {
+        return delegateRepository.save(delegateEntity);
     }
 
     @GetMapping("delegate/{id}")
-    public ResponseEntity<Delegate> getDelegateById(@PathVariable(value = "id") Long delegateId) {
-        Delegate delegate = delegateRepository.findOne(delegateId);
-        if(delegate == null) {
+    public ResponseEntity<DelegateEntity> getDelegateById(@PathVariable(value = "id") Long delegateId) {
+        DelegateEntity delegateEntity = delegateRepository.findOne(delegateId);
+        if (delegateEntity == null) {
             return ResponseEntity.notFound().build();
         }
 
-        return ResponseEntity.ok().body(delegate);
+        return ResponseEntity.ok().body(delegateEntity);
     }
 
     @DeleteMapping("/delegate/{id}")
-    public ResponseEntity<Delegate> deleteDelegate(@PathVariable(value = "id") Long delegateId) {
-        Delegate delegate = delegateRepository.findOne(delegateId);
-        if(delegate == null) {
+    public ResponseEntity<DelegateEntity> deleteDelegate(@PathVariable(value = "id") Long delegateId) {
+        DelegateEntity delegateEntity = delegateRepository.findOne(delegateId);
+        if (delegateEntity == null) {
             return ResponseEntity.notFound().build();
         }
 
-        delegateRepository.delete(delegate);
+        delegateRepository.delete(delegateEntity);
         return ResponseEntity.ok().build();
     }
 
     @GetMapping("delegates")
-    public Collection<Delegate> getAlldelegates() {
+    public Collection<DelegateEntity> getAlldelegates() {
         return delegateRepository.findAll();
     }
 

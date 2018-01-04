@@ -1,10 +1,10 @@
-import {VoteDto} from "./VoteDto";
+import { DelegateDto } from './DelegateDto';
 
 export class AccountDto {
 
   address: string;
   balance: string;
   publicKey: string;
-  votes: VoteDto[];
+  votes: DelegateDto[];
 
 }

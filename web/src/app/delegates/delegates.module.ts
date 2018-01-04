@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule} from '@angular/router';
-import { DelegatesComponent } from "./delegates.component";
+import { RouterModule } from '@angular/router';
+import { DelegatesComponent } from './delegates.component';
+import { DelegatesResolve } from './delegates.resolve';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,10 @@ import { DelegatesComponent } from "./delegates.component";
   imports: [
     BrowserModule,
     RouterModule
+  ],
+  providers: [
+    DelegatesResolve
   ]
 })
-export class DelegatesModule { }
+export class DelegatesModule {
+}

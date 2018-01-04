@@ -4,7 +4,7 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <changeSet author="zwolej" id="1">
-        <createTable tableName="delegate">
+        <createTable tableName="delegate_entity">
 
             <column name="address" type="VARCHAR(255)">
                 <constraints primaryKey="true"/>

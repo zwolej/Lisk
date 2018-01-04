@@ -1,17 +1,15 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {LiskService} from "../services/LiskService";
-import {AccountDto} from "../services/model/AccountDto";
+import { AccountDto } from '../services/lisk/model/AccountDto';
 
 @Component({
-  templateUrl: './wallet.component.html',
-  styleUrls: ['./wallet.component.scss']
+  templateUrl: './wallet.component.html'
 })
 export class WalletComponent {
 
   addressData: AccountDto;
 
-  constructor(private liskService: LiskService, private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute) {
     route.params.subscribe(() => {
       this.addressData = this.route.snapshot.data['info'][0];
       this.addressData.votes = this.route.snapshot.data['info'][1];
