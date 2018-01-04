@@ -1,3 +1,9 @@
+#Docker
+
+docker build -t io.lisk/frontend:commit .
+
+missing gradle with docker plugin
+
 # Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.2.
