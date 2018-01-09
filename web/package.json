@@ -9,7 +9,9 @@
     "report": "ng build --prod --stats-json && webpack-bundle-analyzer dist/stats.json",
     "test": "ng test -sm=false",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "dev": "npm-run-all -p mock-backend start",
+    "mock-backend": "node ./bin/mock-backend.js"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +31,7 @@
     "font-awesome": "^4.7.0",
     "lodash-es": "^4.17.4",
     "ng-recaptcha": "^3.0.3",
+    "npm-run-all": "^4.1.2",
     "particles.js": "^2.0.0",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"
