@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
-import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { ContactModule } from './contact/contact.module';
 import { LiskService } from './services/LiskService';
@@ -14,7 +15,6 @@ import { ErrorModule } from './error/error.module';
 import { NavigationComponent } from './template/navigation.component';
 import { DelegatesModule } from './delegates/delegates.module';
 import { DelegatesService } from './services/DelegatesService';
-import { HttpClientModule } from '@angular/common/http';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 

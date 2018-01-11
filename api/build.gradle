@@ -20,18 +20,26 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
         classpath("gradle.plugin.com.palantir.gradle.docker:gradle-docker:$gradleDockerVersion")
         classpath("org.ajoberstar:gradle-git:$gradleGitVersion")
+        classpath("io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE")
+        classpath("org.springframework.cloud:spring-cloud-contract-gradle-plugin:1.2.1.RELEASE")
     }
 }
+
+group = 'io.lisk'
+version = '1.1'
 
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'org.ajoberstar.grgit'
 apply plugin: 'org.springframework.boot'
+apply plugin: "io.spring.dependency-management"
+apply plugin: 'spring-cloud-contract'
 apply plugin: 'com.palantir.docker'
+apply plugin: 'maven-publish'
 
 jar {
-    baseName = 'backend'
-    version =  '0.0.1'
+    baseName = "${project.name}"
+    version =  "${version}"
 }
 
 repositories {
@@ -45,6 +53,12 @@ repositories {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-contract-dependencies:1.2.1.RELEASE'
+    }
+}
+
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
@@ -54,7 +68,13 @@ dependencies {
 
     compileOnly("org.projectlombok:lombok:$lombokVersion")
 
+    testCompile("org.springframework.cloud:spring-cloud-starter-contract-verifier")
     testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile("io.rest-assured:rest-assured:3.0.6")
+}
+
+contracts {
+    baseClassForTests = 'io.lisk.contracts.MvcTest'
 }
 
 docker {
@@ -63,4 +83,12 @@ docker {
     files jar.archivePath
     buildArgs(['JAR_FILE': "${jar.archiveName}"])
     noCache true
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
 }

@@ -7,7 +7,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 @RestController
 @RequestMapping("api")
@@ -44,7 +46,12 @@ public class DelegateController {
 
     @GetMapping("delegates")
     public Collection<DelegateEntity> getAlldelegates() {
-        return delegateRepository.findAll();
+        DelegateEntity delegateEntity = new DelegateEntity();
+        delegateEntity.setUsername("test");
+        List<DelegateEntity> list = new ArrayList<>();
+        list.add(delegateEntity);
+        return list;
+//        return delegateRepository.findAll();
     }
 
 }
