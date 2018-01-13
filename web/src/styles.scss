@@ -1,3 +1,5 @@
+// PARTICLES
+
 body,
 html {
   height: 100%
@@ -23,10 +25,13 @@ html {
   left: 0;
 }
 
+// SUPER ADMIN OVERRIDES
+
 section.error {
   height: inherit;
 }
 
+//Autofill browser background
 @-webkit-keyframes autofill {
   to {
     color: white;
@@ -37,4 +42,9 @@ section.error {
 input:-webkit-autofill {
   -webkit-animation-name: autofill;
   -webkit-animation-fill-mode: both;
+}
+
+// scroll space with message box
+.scrollbar-inner {
+  padding-right: 3px !important;
 }

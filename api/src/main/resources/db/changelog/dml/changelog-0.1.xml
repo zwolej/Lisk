@@ -4,607 +4,639 @@
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
     <changeSet author="zwolej" id="1">
-        <insert tableName="delegate_entity">
+
+        <insert tableName="post">
+            <column name="id" value="1"/>
+            <column name="nickname" value="Marek"/>
+            <column name="created_at" valueDate="2018-01-10 08:13:24.0"/>
+            <column name="body" value="Quisque consequat arcu eget odio cursus, ut tempor arcu vestibulum. Etiam ex arcu, porta a urna non, lacinia pellentesque orci. Proin semper sagittis erat, eget condimentum sapien viverra et. Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis."/>
+        </insert>
+        <insert tableName="post">
+            <column name="id" valueNumeric="2"/>
+            <column name="nickname" value="Marek"/>
+            <column name="created_at" valueDate="2018-01-10 03:02:24.0"/>
+            <column name="body" value="Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis."/>
+        </insert>
+        <insert tableName="post">
+            <column name="id" valueNumeric="3"/>
+            <column name="nickname" value="Jozek"/>
+            <column name="created_at" valueDate="2018-01-09 21:13:24.0"/>
+            <column name="body" value="Etiam ex arcumentum."/>
+        </insert>
+        <insert tableName="post">
+            <column name="id" valueNumeric="4"/>
+            <column name="nickname" value="Franek"/>
+            <column name="created_at" valueDate="2018-01-09 13:19:24.0"/>
+            <column name="body" value="Etiam nec facilisis lacus. Nulla imperdiet augue ullamcorper dui ullamcorper, eu laoreet sem consectetur. Aenean et ligula risus. Praesent sed posuere sem. Cum sociis natoque penatibus et magnis dis parturient montes"/>
+        </insert>
+        <insert tableName="post">
+            <column name="id" valueNumeric="5"/>
+            <column name="nickname" value="Zenek"/>
+            <column name="created_at" valueDate="2018-01-02 13:19:24.0"/>
+            <column name="body" value="Cum sociis natoque penatibus et magnis dis parturient montes"/>
+        </insert>
+
+        <insert tableName="delegate">
             <column name="address" value="10839494368003872009L"/>
             <column name="pool_share" valueNumeric="80"/>
             <column name="username" value="thepool"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1366"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="14593474056247442712L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="liskpool_com_01"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1130"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="2433857930558702776L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="tembo"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1158"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="11416406146107258985L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="forrest"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1300"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="4034636149257692063L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="liskpool.top"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="16356037149140416854L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="liskgate"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=290"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="801959860607939388L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="badman0316"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1199"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="13943256167405531820L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="iii.element.iii"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1210"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="14212484126746187777L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="spacetrucker"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="6787154358850114730L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="cc001"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=54"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="17621212458226596154L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="robinhood"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1179"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="15458001843048965724L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="leo"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="15435156702499576722L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="acheng"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="4402625644334434270L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="liskjp"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1229"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="6281405850162033335L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="bigfisher"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1230"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="6356913781456505636L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="rooney"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1247"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="3741683474356548491L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="nerigal"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1128"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="3237673512436243226L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="panzer"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="7984234674117396356L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="bioly"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=237"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="765057514163296046L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="ondin"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=311"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="2074128296889030323L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="xujian"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1196"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="3665594920317480024L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="will"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1360"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="16152155423726476379L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="shinekami"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1465"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="10934306629196932988L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="sgdias"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=121"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="6853061742992593192L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="punkrock"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=86"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="16979707772780220012L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="grumlin"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1186"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="3026381832248350807L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="corsaro"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=187"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="16564709774155482395L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="vi1son"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1132"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="6674162710313805686L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="ntelo"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1139"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="5472860176536642962L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="phinx"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1156"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="10310263204519541551L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="liskit"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=197"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="3583773362804762494L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="luxiang7890"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="2059909095002215101L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="eastwind_ja"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1389"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="194109334904015388L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="gr33ndrag0n"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=143"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="17584737652648280645L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="eclipsun"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="18069265829053472143L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="carolina"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1149"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="3125853987625788223L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="mrgr"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1191"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="13214966370334815499L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="someonesomeone"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=170"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="3706844901938026254L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="philhellmuth"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1488"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="9102643396261850794L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="vekexasia"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1546"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="12490495662800209583L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="crodam"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=125"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="16458712373486968818L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="adrianhunter"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="1721671924473554971L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="chamberlain"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1311"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="5241063366434807683L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="forger_of_lisk"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="7725745407648930648L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="grajsondelegate"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=130"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="15056673209583244182L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="goldeneye"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1145"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="7187501713766457398L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="seven"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1473"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="7387265715586251506L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="luukas"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1436"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="3920536512311562482L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="honeybee"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="11324865266990093379L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="hua"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=341"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="7714731151444318219L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="savetheworld"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1131"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="2324852447570841050L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="dakk"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1094"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="293347761883204765L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="liskroad"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="11137319173876739343L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="crolisk"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="15833684874495472493L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="veriform"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1227"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="17944961271973053062L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="mac"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="16010222169256538112L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="4miners.net"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1215"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="7785089688506705621L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="luiz"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1181"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="5908902152314233521L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="goodtimes"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="17589464102226817833L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="slasheks"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=155"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="10368229158858685154L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="zy1349"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="8661902537380848029L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="augurproject"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="18170322128905228876L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="jixie"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="11380384760969655418L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="mrv"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=292"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="10817258342075237585L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="bilibili"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="1856675932034497943L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="blackswan"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="15990849124962899351L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="loveforever"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="15963641443478982497L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="redsn0w"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=185"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="7093160678988084393L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="bigtom"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="12731041415715717263L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="lwyrup"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="5961970541244509405L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="hong"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="6165534766664619667L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="carbonara"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1231"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="269987742292481322L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="khitan"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="8858064098621060602L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="hmachado"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1231"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="4134531592799494959L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="dakini"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="3355233929585989338L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="yuandian"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="7910612402065369026L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="jiandan"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="11531556153048102711L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="cai"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="731774066839038986L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="menfei"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="9698516298298732428L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="kc"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="17059886363552285239L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="vrlc92"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="4127534797357267194L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="elonhan"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="13088626869816331666L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="splatters"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=153"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="11349207601124731709L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="catstar"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="1848933911281528224L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="china"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="977255361881067219L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="threelittlepig"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="15779162366634226730L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="kaystar"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="10804763751453501689L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="communitypool"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1268"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="4980451641598555896L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="vipertkd"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=246"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="12654423644480926777L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="joo5ty"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1543"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="8466190194079547581L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="hagie"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1190"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="4225472009432714154L"/>
             <column name="pool_share" valueNumeric="25"/>
-            <column name="username" value="kushed.delegate_entity"/>
+            <column name="username" value="kushed.delegate"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1155"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="8675947023277781177L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="samuray"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=136"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="2004134067472288525L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="liberspirita"/>
             <column name="website" value=""/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="14871479939815286293L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="5an1ty"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1521"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="7621048351401864465L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="joel"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1520"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="7292106026137978431L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="stellardynamic"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1328"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="17438085793668748066L	"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="devasive"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=241"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="1251806989552612274L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="gdtpool"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1506"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="4318457725971796647L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="index"/>
             <column name="website" value="https://forum.lisk.io/viewtopic.php?f=48&amp;t=1533"/>
         </insert>
-        <insert tableName="delegate_entity">
+        <insert tableName="delegate">
             <column name="address" value="8668463642800443353L"/>
             <column name="pool_share" valueNumeric="25"/>
             <column name="username" value="phoenix1969"/>

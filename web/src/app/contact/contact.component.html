@@ -28,46 +28,14 @@
 
       <div class="messages__content">
         <div class="scrollbar-inner">
-          <div class="messages__item">
+
+          <div [ngClass]="(i % 2) ? 'messages__item messages__item--right' : 'messages__item'" *ngFor="let item of posts; let i = index">
             <div class="messages__details">
-              <p>Quisque consequat arcu eget odio cursus, ut tempor arcu vestibulum. Etiam ex arcu, porta a urna non,
-                lacinia pellentesque orci. Proin semper sagittis erat, eget condimentum sapien viverra et. Mauris
-                volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar
-                lobortis.</p>
-              <small><i class="zmdi zmdi-time"></i> 20/04/2017 at 09:00 by <b>Marek</b></small>
+              <p>{{item.body}}</p>
+              <small><i class="zmdi zmdi-time"></i> {{item.createdAt}} by <b>{{item.nickname}}</b></small>
             </div>
           </div>
 
-          <div class="messages__item messages__item--right">
-            <div class="messages__details">
-              <p>Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar
-                lobortis.</p>
-              <small><i class="zmdi zmdi-time"></i> 20/04/2017 at 09:10 by <b>Andrzej</b></small>
-            </div>
-          </div>
-
-          <div class="messages__item">
-            <div class="messages__details">
-              <p>Etiam ex arcumentum</p>
-              <small><i class="zmdi zmdi-time"></i> 20/04/2017 at 09:11 by <b>Jozek</b></small>
-            </div>
-          </div>
-
-          <div class="messages__item messages__item--right">
-            <div class="messages__details">
-              <p>Etiam nec facilisis lacus. Nulla imperdiet augue ullamcorper dui ullamcorper, eu laoreet sem
-                consectetur. Aenean et ligula risus. Praesent sed posuere sem. Cum sociis natoque penatibus et magnis
-                dis parturient montes</p>
-              <small><i class="zmdi zmdi-time"></i> 20/04/2017 at 09:15 by <b>Franek</b></small>
-            </div>
-          </div>
-
-          <div class="messages__item">
-            <div class="messages__details">
-              <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-              <small><i class="zmdi zmdi-time"></i> 20/04/2017 at 09:22 by <b>Zenek</b></small>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -83,7 +51,10 @@
 
         <!--<re-captcha (resolved)="resolved($event)" siteKey="YOUR_SITE_KEY"></re-captcha>-->
 
-        <textarea class="messages__reply__text" placeholder="Type a message..."></textarea>
+        <form (submit)="post($event)">
+          <input type="text" [(ngModel)]="postBody" name="walletAddress" [maxLength]="'25'"
+                    class="messages__reply__text" placeholder="Type a message...">
+        </form>
       </div>
     </div>
   </div>

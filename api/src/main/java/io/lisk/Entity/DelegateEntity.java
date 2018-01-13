@@ -6,16 +6,19 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+@Entity(name = "Delegate")
 public class DelegateEntity {
 
     @Id
     private String address;
+
     @NotBlank
     @Column(unique = true)
     private String username;
+
     @NotBlank
     private int poolShare;
+
     private String website;
 
     public String getAddress() {
@@ -49,4 +52,5 @@ public class DelegateEntity {
     public void setWebsite(String website) {
         this.website = website;
     }
+
 }

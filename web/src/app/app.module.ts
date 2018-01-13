@@ -14,7 +14,6 @@ import { ErrorService } from './services/ErrorService';
 import { ErrorModule } from './error/error.module';
 import { NavigationComponent } from './template/navigation.component';
 import { DelegatesModule } from './delegates/delegates.module';
-import { DelegatesService } from './services/DelegatesService';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 
@@ -42,7 +41,6 @@ import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
   ],
   providers: [
     LiskService,
-    DelegatesService,
     ErrorService
   ],
   bootstrap: [AppComponent]

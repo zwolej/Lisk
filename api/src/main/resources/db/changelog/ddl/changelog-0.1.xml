@@ -4,8 +4,8 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <changeSet author="zwolej" id="1">
-        <createTable tableName="delegate_entity">
 
+        <createTable tableName="delegate">
             <column name="address" type="VARCHAR(255)">
                 <constraints primaryKey="true"/>
             </column>
@@ -16,8 +16,23 @@
                 <constraints nullable="false"/>
             </column>
             <column name="website" type="VARCHAR(255)"/>
-
         </createTable>
+
+        <createTable tableName="post">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="nickname" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="body" type="VARCHAR(500)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="datetime(6)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
     </changeSet>
 
 </databaseChangeLog>

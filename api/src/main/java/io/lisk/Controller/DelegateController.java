@@ -7,9 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 @RestController
 @RequestMapping("api")
@@ -24,7 +22,7 @@ public class DelegateController {
     }
 
     @GetMapping("delegate/{id}")
-    public ResponseEntity<DelegateEntity> getDelegateById(@PathVariable(value = "id") Long delegateId) {
+    public ResponseEntity<DelegateEntity> getDelegateById(@PathVariable(value = "id") String delegateId) {
         DelegateEntity delegateEntity = delegateRepository.findOne(delegateId);
         if (delegateEntity == null) {
             return ResponseEntity.notFound().build();
@@ -34,7 +32,7 @@ public class DelegateController {
     }
 
     @DeleteMapping("/delegate/{id}")
-    public ResponseEntity<DelegateEntity> deleteDelegate(@PathVariable(value = "id") Long delegateId) {
+    public ResponseEntity<DelegateEntity> deleteDelegate(@PathVariable(value = "id") String delegateId) {
         DelegateEntity delegateEntity = delegateRepository.findOne(delegateId);
         if (delegateEntity == null) {
             return ResponseEntity.notFound().build();
@@ -46,12 +44,12 @@ public class DelegateController {
 
     @GetMapping("delegates")
     public Collection<DelegateEntity> getAlldelegates() {
-        DelegateEntity delegateEntity = new DelegateEntity();
-        delegateEntity.setUsername("test");
-        List<DelegateEntity> list = new ArrayList<>();
-        list.add(delegateEntity);
-        return list;
-//        return delegateRepository.findAll();
+//        DelegateEntity delegateEntity = new DelegateEntity();
+//        delegateEntity.setUsername("test");
+//        List<DelegateEntity> list = new ArrayList<>();
+//        list.add(delegateEntity);
+//        return list;
+        return delegateRepository.findAll();
     }
 
 }
