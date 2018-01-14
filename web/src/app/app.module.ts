@@ -16,6 +16,7 @@ import { NavigationComponent } from './template/navigation.component';
 import { DelegatesModule } from './delegates/delegates.module';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
+import { HttpService } from './services/HttpService';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
   ],
   providers: [
     LiskService,
+    HttpService,
     ErrorService
   ],
   bootstrap: [AppComponent]

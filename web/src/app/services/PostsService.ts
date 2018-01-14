@@ -1,23 +1,21 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { PostDto } from './internal/model/PostDto';
+import { HttpService } from './HttpService';
 
 @Injectable()
 export class PostsService {
 
-  api = '/api/';
-
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpService) {
   }
 
   public getAllPosts(): Observable<PostDto> {
-    return this.http.get(this.api + 'posts')
+    return this.http.get('posts')
       .map(this.extractData);
   }
 
   public sendPost(post: PostDto): Observable<PostDto> {
-    return this.http.post(this.api + 'post', post)
+    return this.http.post('post', post)
       .map(this.extractData);
   }
 

@@ -1,18 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { DelegateAdditionalDto } from './internal/model/DelegateAdditionalDto';
+import { HttpService } from './HttpService';
 
 @Injectable()
 export class DelegatesService {
 
-  api = '/api/';
-
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpService) {
   }
 
   public getAllDelegatesAdditionalData(): Observable<DelegateAdditionalDto> {
-    return this.http.get(this.api + 'delegates')
+    return this.http.get('delegates')
       .map(this.extractData);
   }
 
