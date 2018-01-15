@@ -2,7 +2,6 @@ package io.lisk.contracts;
 
 import io.lisk.Application;
 import io.lisk.Controller.DelegateController;
-import io.lisk.Controller.PostController;
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.Before;
 import org.junit.runner.RunWith;
@@ -14,17 +13,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
         classes = Application.class)
-public abstract class FullContextContractTest {
+public abstract class FullContextContractDelegatesTest {
 
     @Autowired
     private DelegateController delegateController;
 
-    @Autowired
-    private PostController postController;
-
     @Before
     public void setup() {
-        RestAssuredMockMvc.standaloneSetup(delegateController, postController);
+        RestAssuredMockMvc.standaloneSetup(delegateController);
     }
 
 }

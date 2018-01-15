@@ -79,7 +79,10 @@ dependencies {
 
 contracts {
     testMode = 'MOCKMVC'
-    baseClassForTests = 'io.lisk.contracts.FullContextContractTest'
+    baseClassMappings {
+        baseClassMapping('.*delegates.*', 'io.lisk.contracts.FullContextContractDelegatesTest')
+        baseClassMapping('.*posts.*': 'io.lisk.contracts.FullContextContractPostTest')
+    }
 }
 
 docker {

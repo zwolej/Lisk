@@ -1,21 +1,22 @@
 <?xml version="1.1" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
     <changeSet author="zwolej" id="1">
 
         <insert tableName="post">
             <column name="id" value="1"/>
             <column name="nickname" value="Marek"/>
             <column name="created_at" valueDate="2018-01-10 08:13:24.0"/>
-            <column name="body" value="Quisque consequat arcu eget odio cursus, ut tempor arcu vestibulum. Etiam ex arcu, porta a urna non, lacinia pellentesque orci. Proin semper sagittis erat, eget condimentum sapien viverra et. Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis."/>
+            <column name="body"
+                    value="Quisque consequat arcu eget odio cursus, ut tempor arcu vestibulum. Etiam ex arcu, porta a urna non, lacinia pellentesque orci. Proin semper sagittis erat, eget condimentum sapien viverra et. Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis."/>
         </insert>
         <insert tableName="post">
             <column name="id" valueNumeric="2"/>
             <column name="nickname" value="Marek"/>
             <column name="created_at" valueDate="2018-01-10 03:02:24.0"/>
-            <column name="body" value="Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis."/>
+            <column name="body"
+                    value="Mauris volutpat magna nibh, et condimentum est rutrum a. Nunc sed turpis mi. In eu massa a sem pulvinar lobortis."/>
         </insert>
         <insert tableName="post">
             <column name="id" valueNumeric="3"/>
@@ -27,7 +28,8 @@
             <column name="id" valueNumeric="4"/>
             <column name="nickname" value="Franek"/>
             <column name="created_at" valueDate="2018-01-09 13:19:24.0"/>
-            <column name="body" value="Etiam nec facilisis lacus. Nulla imperdiet augue ullamcorper dui ullamcorper, eu laoreet sem consectetur. Aenean et ligula risus. Praesent sed posuere sem. Cum sociis natoque penatibus et magnis dis parturient montes"/>
+            <column name="body"
+                    value="Etiam nec facilisis lacus. Nulla imperdiet augue ullamcorper dui ullamcorper, eu laoreet sem consectetur. Aenean et ligula risus. Praesent sed posuere sem. Cum sociis natoque penatibus et magnis dis parturient montes"/>
         </insert>
         <insert tableName="post">
             <column name="id" valueNumeric="5"/>
