@@ -1,5 +1,6 @@
 package io.lisk.Entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
@@ -46,6 +47,7 @@ public class PostEntity {
         return body;
     }
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }

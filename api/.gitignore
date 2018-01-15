@@ -6,3 +6,5 @@
 # compiled output
 build
 out
+
+.gradle
