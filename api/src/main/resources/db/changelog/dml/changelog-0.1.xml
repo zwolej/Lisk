@@ -4,6 +4,13 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
     <changeSet author="zwolej" id="1">
 
+        <insert tableName="user">
+            <column name="id" value="1"/>
+            <column name="username" value="test"/>
+            <column name="password" value="$2a$10$EblZqNptyYvcLm/VwDCVAuBjzZOI7khzdyGPBr08PpIi0na624b8."/><!--123456-->
+            <column name="email" value="test@test.test"/>
+        </insert>
+
         <insert tableName="post">
             <column name="id" value="1"/>
             <column name="nickname" value="Marek"/>

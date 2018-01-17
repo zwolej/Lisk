@@ -1,7 +1,7 @@
 package io.lisk.contracts;
 
 import io.lisk.Application;
-import io.lisk.Controller.DelegateController;
+import io.lisk.controller.DelegateController;
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.Before;
 import org.junit.runner.RunWith;

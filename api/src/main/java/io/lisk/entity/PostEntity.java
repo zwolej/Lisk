@@ -1,4 +1,4 @@
-package io.lisk.Entity;
+package io.lisk.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.validator.constraints.NotBlank;

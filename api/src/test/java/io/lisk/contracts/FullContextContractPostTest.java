@@ -1,7 +1,7 @@
 package io.lisk.contracts;
 
 import io.lisk.Application;
-import io.lisk.Controller.PostController;
+import io.lisk.controller.PostController;
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.junit.Before;
 import org.junit.runner.RunWith;

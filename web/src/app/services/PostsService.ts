@@ -10,12 +10,12 @@ export class PostsService {
   }
 
   public getAllPosts(): Observable<PostDto> {
-    return this.http.get('posts')
+    return this.http.get('public/posts')
       .map(this.extractData);
   }
 
   public sendPost(post: PostDto): Observable<PostDto> {
-    return this.http.post('post', post)
+    return this.http.post('public/post', post)
       .map(this.extractData);
   }
 

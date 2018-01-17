@@ -1,8 +1,8 @@
-package io.lisk.Controller;
+package io.lisk.controller;
 
-import io.lisk.Dto.PostDto;
-import io.lisk.Entity.PostEntity;
-import io.lisk.Repository.PostRepository;
+import io.lisk.dto.PostDto;
+import io.lisk.entity.PostEntity;
+import io.lisk.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("api/public")
 public class PostController {
 
     private static final String ANONYMOUS = "Anonymous Users";

@@ -1,6 +1,6 @@
-package io.lisk.Repository;
+package io.lisk.repository;
 
-import io.lisk.Entity.DelegateEntity;
+import io.lisk.entity.DelegateEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface DelegateRepository extends JpaRepository<DelegateEntity, String> {

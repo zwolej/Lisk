@@ -1,7 +1,7 @@
-package io.lisk.Controller;
+package io.lisk.controller;
 
-import io.lisk.Entity.DelegateEntity;
-import io.lisk.Repository.DelegateRepository;
+import io.lisk.entity.DelegateEntity;
+import io.lisk.repository.DelegateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +10,7 @@ import javax.validation.Valid;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("api/public")
 public class DelegateController {
 
     @Autowired

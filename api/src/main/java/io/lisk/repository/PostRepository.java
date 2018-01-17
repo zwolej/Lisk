@@ -1,6 +1,6 @@
-package io.lisk.Repository;
+package io.lisk.repository;
 
-import io.lisk.Entity.PostEntity;
+import io.lisk.entity.PostEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Set;

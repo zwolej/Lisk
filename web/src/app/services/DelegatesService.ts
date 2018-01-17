@@ -10,7 +10,7 @@ export class DelegatesService {
   }
 
   public getAllDelegatesAdditionalData(): Observable<DelegateAdditionalDto> {
-    return this.http.get('delegates')
+    return this.http.get('public/delegates')
       .map(this.extractData);
   }
 

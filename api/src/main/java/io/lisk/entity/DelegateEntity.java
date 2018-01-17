@@ -1,4 +1,4 @@
-package io.lisk.Entity;
+package io.lisk.entity;
 
 import org.hibernate.validator.constraints.NotBlank;
 

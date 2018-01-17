@@ -1,4 +1,4 @@
-package io.lisk.Dto;
+package io.lisk.dto;
 
 public class PostDto {
 

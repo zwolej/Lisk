@@ -5,6 +5,21 @@
 
     <changeSet author="zwolej" id="1">
 
+        <createTable tableName="user">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="username" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password" type="VARCHAR(60)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(60)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
         <createTable tableName="delegate">
             <column name="address" type="VARCHAR(255)">
                 <constraints primaryKey="true"/>
