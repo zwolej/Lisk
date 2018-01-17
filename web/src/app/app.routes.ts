@@ -4,6 +4,7 @@ import { ContactRoutes } from './contact/contact.routes';
 import { WalletRoutes } from './wallet/wallet.routes';
 import { ErrorRoutes } from './error/error.routes';
 import { DelegatesRoutes } from './delegates/delegates.routes';
+import { LoginRoutes } from "./login/login.routes";
 
 export const AppRoutes: Routes = [
   {
@@ -14,6 +15,7 @@ export const AppRoutes: Routes = [
         redirectTo: 'home',
         pathMatch: 'full'
       },
+      ...LoginRoutes,
       ...HomeRoutes,
       ...WalletRoutes,
       ...ContactRoutes,

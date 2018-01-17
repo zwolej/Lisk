@@ -42,8 +42,6 @@ export class HttpService extends HttpClient {
 
   private handleUrlForServerSideRendering(url: string) {
     const origin = (this.origin ? this.origin : '');
-    console.log('create ur' +
-      'l ' + origin + ' ' + url);
     return origin + HttpService.API_BASE + url;
   }
 

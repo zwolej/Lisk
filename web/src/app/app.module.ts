@@ -17,6 +17,7 @@ import { DelegatesModule } from './delegates/delegates.module';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 import { HttpService } from './services/HttpService';
+import { LoginModule } from "./login/login.module";
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HttpService } from './services/HttpService';
     AppComponent
   ],
   imports: [
+    LoginModule,
     HomeModule,
     WalletModule,
     ContactModule,
