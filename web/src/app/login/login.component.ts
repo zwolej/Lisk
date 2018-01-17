@@ -1,27 +1,27 @@
 import { Component } from '@angular/core';
-import { LoginService } from "../services/LoginService";
+import { LoginService } from '../services/LoginService';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './login.component.html'
 })
 export class LoginComponent {
 
-  constructor(private loginService: LoginService) {
-  }
-
+  shownOption = 'login';
   username: string;
   password: string;
 
-  login() {
-    console.log("Try to login");
+  constructor(private router: Router, private loginService: LoginService) {
+  }
 
+  login() {
     if (this.username && this.password) {
       this.loginService.login(this.username, this.password)
-        .subscribe((event) => {
-          console.log("repsonse from login", event);
+        .subscribe(() => {
+          this.router.navigate(['/']);
         });
     } else {
-      console.log("Invalid form login data");
+      console.log('Invalid form login data');
     }
   }
 

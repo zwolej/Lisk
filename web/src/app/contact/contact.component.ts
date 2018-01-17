@@ -33,7 +33,6 @@ export class ContactComponent {
         .subscribe((res: PostDto) => {
           this.posts.splice(0, 0, res);
           this.onSuccessClearInputAndShowNewMessage();
-          console.log('Posted messaged', res);
         });
     }
   }

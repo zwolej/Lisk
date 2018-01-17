@@ -4,6 +4,7 @@ import io.lisk.dto.UserDto;
 import io.lisk.entity.UserEntity;
 import io.lisk.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

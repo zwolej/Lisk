@@ -4,27 +4,36 @@ import { ContactRoutes } from './contact/contact.routes';
 import { WalletRoutes } from './wallet/wallet.routes';
 import { ErrorRoutes } from './error/error.routes';
 import { DelegatesRoutes } from './delegates/delegates.routes';
-import { LoginRoutes } from "./login/login.routes";
+import { LoginRoutes } from './login/login.routes';
+import { AuthGuard } from './app.auth.guard';
 
 export const AppRoutes: Routes = [
   {
     path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    // public
+    path: '',
     children: [
-      {
-        path: '',
-        redirectTo: 'home',
-        pathMatch: 'full'
-      },
       ...LoginRoutes,
       ...HomeRoutes,
       ...WalletRoutes,
-      ...ContactRoutes,
       ...DelegatesRoutes,
-// ERROR ON END
-      ...ErrorRoutes,
-    ],
+    ]
   },
+  {
+    // private
+    path: '',
+    canActivate: [AuthGuard],
+    children: [
+      ...ContactRoutes,
+    ]
+  },
+  ...ErrorRoutes,
 ];
+// ERROR ON END
 
 export const routes: Routes = [
   ...AppRoutes

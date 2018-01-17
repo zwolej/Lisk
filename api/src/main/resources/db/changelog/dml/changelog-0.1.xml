@@ -7,7 +7,7 @@
         <insert tableName="user">
             <column name="id" value="1"/>
             <column name="username" value="test"/>
-            <column name="password" value="$2a$10$EblZqNptyYvcLm/VwDCVAuBjzZOI7khzdyGPBr08PpIi0na624b8."/><!--123456-->
+            <column name="password" value="$2a$10$wLTJHn7QBK3gT7D5B6sCI.c1O/a7.l3pLCs1BmHIw3pbkltkWg36a"/><!--1-->
             <column name="email" value="test@test.test"/>
         </insert>
 

@@ -6,8 +6,7 @@ import { HttpService } from './HttpService';
 @Injectable()
 export class LoginService {
 
-  constructor(private http: HttpService) {
-  }
+  constructor(private http: HttpService) { }
 
   public login(username: string, password: string): Observable<PostDto> {
     return this.http.post('login', {username: username, password: password});

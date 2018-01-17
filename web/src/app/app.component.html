@@ -129,6 +129,13 @@
           <i class="zmdi zmdi-palette"></i>
         </a>
       </li>
+
+      <li class="hidden-xs-down" *ngIf="isLogged()">
+        <a (click)="logout()">
+          <i class="zmdi zmdi-power-off-setting"></i>
+        </a>
+      </li>
+
     </ul>
 
   </header>

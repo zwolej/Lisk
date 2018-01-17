@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivationEnd, ActivationStart, NavigationEnd, Router } from '@angular/router';
+import { AuthService } from './services/AuthService';
 
 declare var particlesJS: any;
 declare var $: any;
@@ -12,7 +13,7 @@ export class AppComponent implements OnInit {
 
   walletAddress: string;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private authService: AuthService) {
     router.events.forEach((event) => {
       if (event instanceof ActivationStart) {
         // $(".page-loader").fadeIn(); //LOADING BAR ON NAVIGATION
@@ -32,6 +33,15 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.allowToRefreshSameRouteOnNavigation();
     particlesJS.load('particles-js', 'assets/particles.json', null);
+  }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/']);
+  }
+
+  isLogged() {
+    return this.authService.isLogged();
   }
 
   searchForWallet(event: any) {

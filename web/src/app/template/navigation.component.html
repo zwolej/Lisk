@@ -4,10 +4,18 @@
     <!--LOGGED USER-->
 
     <div class="user">
-      <div class="user__info" data-toggle="dropdown">
+
+      <div class="user__info" data-toggle="dropdown" *ngIf="isLogged();">
+          <img class="user__img" src="assets/wrap-bootstrap/demo/img/profile-pics/2.jpg" alt="">
+          <div>
+            <div class="user__name">Logged User</div>
+            <!--<div class="user__email">malinda-h@gmail.com</div>-->
+          </div>
+      </div>
+      <div class="user__info" data-toggle="dropdown" *ngIf="!isLogged()">
         <img class="user__img" src="assets/wrap-bootstrap/demo/img/profile-pics/user_empty.png" alt="">
         <div>
-          <div class="user__name">Anonymous Users</div>
+          <div class="user__name">Anonymous User</div>
           <!--<div class="user__email">malinda-h@gmail.com</div>-->
         </div>
       </div>

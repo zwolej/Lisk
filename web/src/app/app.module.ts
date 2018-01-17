@@ -17,7 +17,11 @@ import { DelegatesModule } from './delegates/delegates.module';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 import { HttpService } from './services/HttpService';
-import { LoginModule } from "./login/login.module";
+import { LoginModule } from './login/login.module';
+import { AuthGuard } from './app.auth.guard';
+import { AuthService } from './services/AuthService';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AppInterceptor } from './app.interceptor';
 
 @NgModule({
   declarations: [
@@ -43,9 +47,18 @@ import { LoginModule } from "./login/login.module";
     RouterModule
   ],
   providers: [
+    [
+      {
+        provide: HTTP_INTERCEPTORS,
+        useClass: AppInterceptor,
+        multi: true
+      }
+    ],
     LiskService,
     HttpService,
-    ErrorService
+    ErrorService,
+    AuthService,
+    AuthGuard,
   ],
   bootstrap: [AppComponent]
 })
