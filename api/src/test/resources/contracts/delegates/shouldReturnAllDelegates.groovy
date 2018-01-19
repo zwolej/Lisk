@@ -5,7 +5,7 @@ import org.springframework.cloud.contract.spec.Contract
 Contract.make {
     request {
         method 'GET'
-        url 'api/delegates'
+        url '/api/public/delegates'
     }
     response {
         status 200

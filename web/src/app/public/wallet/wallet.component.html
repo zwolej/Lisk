@@ -1,0 +1,56 @@
+<header class="content__title">
+  <h1>Address Info</h1>
+</header>
+
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Wallet</h4>
+
+    <table class="table table-responsive mb-0">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Address</th>
+        <th>Balance</th>
+        <th>Public key</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{addressData?.address}}</td>
+        <td>{{addressData?.balance}}</td>
+        <td>{{addressData?.publicKey}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Voted delegates</h4>
+    <h6 class="card-subtitle">List of votes placed by a given address</h6>
+
+    <div class="table-responsive">
+      <table [attr.id]="'data-table'" class="table">
+        <thead>
+        <tr>
+          <th>Username</th>
+          <th>Rank</th>
+          <th>Rate</th>
+          <th>Address</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of addressData?.votes">
+          <td>{{item.username}}</td>
+          <td>{{item.rank}}</td>
+          <td>{{item.rate}}</td>
+          <td>{{item.address}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

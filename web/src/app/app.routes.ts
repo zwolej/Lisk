@@ -1,11 +1,12 @@
 import { Routes } from '@angular/router';
-import { HomeRoutes } from './home/home.routes';
-import { ContactRoutes } from './contact/contact.routes';
-import { WalletRoutes } from './wallet/wallet.routes';
-import { ErrorRoutes } from './error/error.routes';
-import { DelegatesRoutes } from './delegates/delegates.routes';
-import { LoginRoutes } from './login/login.routes';
+import { HomeRoutes } from './public/home/home.routes';
+import { ContactRoutes } from './public/contact/contact.routes';
+import { WalletRoutes } from './public/wallet/wallet.routes';
+import { ErrorRoutes } from './public/error/error.routes';
+import { DelegatesRoutes } from './public/delegates/delegates.routes';
+import { LoginRoutes } from './public/login/login.routes';
 import { AuthGuard } from './app.auth.guard';
+import { YourWalletRoutes } from "./private/wallet/your.wallet.routes";
 
 export const AppRoutes: Routes = [
   {
@@ -13,22 +14,21 @@ export const AppRoutes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-  {
-    // public
+  { // public
     path: '',
     children: [
       ...LoginRoutes,
       ...HomeRoutes,
       ...WalletRoutes,
       ...DelegatesRoutes,
+      ...ContactRoutes,
     ]
   },
-  {
-    // private
+  { // private
     path: '',
     canActivate: [AuthGuard],
     children: [
-      ...ContactRoutes,
+      ...YourWalletRoutes
     ]
   },
   ...ErrorRoutes,

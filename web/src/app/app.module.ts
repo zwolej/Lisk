@@ -4,24 +4,25 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { HomeModule } from './home/home.module';
+import { HomeModule } from './public/home/home.module';
 import { routes } from './app.routes';
-import { ContactModule } from './contact/contact.module';
+import { ContactModule } from './public/contact/contact.module';
 import { LiskService } from './services/LiskService';
-import { WalletModule } from './wallet/wallet.module';
+import { WalletModule } from './public/wallet/wallet.module';
 import { FormsModule } from '@angular/forms';
 import { ErrorService } from './services/ErrorService';
-import { ErrorModule } from './error/error.module';
-import { NavigationComponent } from './template/navigation.component';
-import { DelegatesModule } from './delegates/delegates.module';
+import { ErrorModule } from './public/error/error.module';
+import { NavigationComponent } from './public/template/navigation.component';
+import { DelegatesModule } from './public/delegates/delegates.module';
 import { RecaptchaModule } from 'ng-recaptcha';
 import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 import { HttpService } from './services/HttpService';
-import { LoginModule } from './login/login.module';
+import { LoginModule } from './public/login/login.module';
 import { AuthGuard } from './app.auth.guard';
 import { AuthService } from './services/AuthService';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppInterceptor } from './app.interceptor';
+import { YourWalletModule } from "./private/wallet/your.wallet.module";
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { AppInterceptor } from './app.interceptor';
     LoginModule,
     HomeModule,
     WalletModule,
+    YourWalletModule,
     ContactModule,
     DelegatesModule,
     ErrorModule,

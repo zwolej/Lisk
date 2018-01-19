@@ -9,7 +9,9 @@
     "report": "ng build --prod --stats-json && webpack-bundle-analyzer dist/stats.json",
     "test": "ng test -sm=false",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "mock-backend": "node ./mock/mock-backend.js stubs=io/lisk/api/0.0.1/api-0.0.1-stubs.jar port=8080",
+    "dev": "npm-run-all -p mock-backend start"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +26,7 @@
     "@angular/router": "^5.0.0",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.5",
     "@types/lodash-es": "^4.17.0",
+    "angular2-jwt": "^0.2.3",
     "bootstrap": "^4.0.0-beta.2",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
@@ -49,10 +52,12 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "npm-run-all": "^4.1.2",
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
     "typescript": "~2.4.2",
+    "unzip": "^0.1.11",
     "webpack-bundle-analyzer": "^2.9.1"
   }
 }

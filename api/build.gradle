@@ -29,7 +29,7 @@ buildscript {
 }
 
 group = 'io.lisk'
-version = '1.1'
+version = '0.0.1'
 
 apply plugin: 'java'
 apply plugin: 'idea'
