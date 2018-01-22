@@ -1,5 +1,30 @@
 # Docker
 
+### production running
+
+in api folder
+```
+./gradlew build docker 
+```
+then
+```
+docker images
+```
+
+get latest image tag io.lisk/api
+
+put it into api/docker-compose.yml
+```
+api:
+    image: io.lisk/api:<HERE_TAG>
+```
+
+run full backend:
+
+```
+api/docker-compose up -d
+```
+
 ### db
 
 phpmyadmin + mariadb + liqubase
