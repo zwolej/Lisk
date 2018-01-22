@@ -92,8 +92,6 @@ docker {
     name "io.lisk/${jar.baseName}:${grgit.head().getAbbreviatedId()}"
     dockerfile file('Dockerfile')
     files jar.archivePath
-    println "jar => "
-    println "${jar.archiveName}"
     buildArgs(['JAR_FILE': "${jar.archiveName}"])
     noCache true
 }

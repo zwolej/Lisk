@@ -38,6 +38,9 @@ export class AppInterceptor implements HttpInterceptor {
 
   interceptError(err: HttpErrorResponse) {
     console.log('intercept response error', err);
+
+    //TODO ADD EXPIRED TOKENS HANDLER
+
     if (err.status === 401) {
       this.router.navigate(['/login']);
     }

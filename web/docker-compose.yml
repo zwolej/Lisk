@@ -1,7 +1,7 @@
 version: '3.3'
 
 services:
-  web:
+  lisk-web:
     image: nginx:alpine
     volumes:
       - ./dist:/usr/share/nginx/html

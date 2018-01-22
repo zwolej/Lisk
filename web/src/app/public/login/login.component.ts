@@ -15,7 +15,6 @@ export class LoginComponent {
   }
 
   login(event: any) {
-    console.log("sadsubmit");
     event.preventDefault();
 
     if (this.username && this.password) {

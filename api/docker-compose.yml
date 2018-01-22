@@ -1,7 +1,7 @@
 version: '3.3'
 
 services:
-  db:
+  lisk-db:
     image: mariadb:10.3.3
     environment:
       MYSQL_ROOT_PASSWORD: lisk6532root
@@ -10,26 +10,26 @@ services:
       MYSQL_DATABASE: lisk
     ports:
       - 3307:3306
-  phpmyadmin:
+  lisk-phpmyadmin:
     image: phpmyadmin/phpmyadmin:4.7.7-1
     links:
-      - db
+      - lisk-db
     environment:
-      PMA_HOST: db
+      PMA_HOST: lisk-db
       PMA_PORT: 3306
       MYSQL_ROOT_PASSWORD: lisk6532root
       MYSQL_USER: lisk
       MYSQL_PASSWORD: lisk6532
     ports:
       - 8181:80
-  api:
+  lisk-api:
     image: io.lisk/api:04e47ce
     environment:
-      DB_URL: db:3306
+      DB_URL: lisk-db:3306
       DB_NAME: lisk
       DB_USER: lisk
       DB_PASSWORD: lisk6532
     links:
-      - db
+      - lisk-db
     ports:
       - 8080:8080
