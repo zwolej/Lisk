@@ -13,15 +13,16 @@ $(document).ready(function () {
 
         // Add custom buttons
         var dataTableButtons =  '<div class="dataTables_buttons hidden-sm-down actions">' +
-                                    '<span class="actions__item zmdi zmdi-print" data-table-action="print" />' +
-                                    '<span class="actions__item zmdi zmdi-fullscreen" data-table-action="fullscreen" />' +
-                                    '<div class="dropdown actions__item">' +
-                                        '<i data-toggle="dropdown" class="zmdi zmdi-download" />' +
-                                        '<ul class="dropdown-menu dropdown-menu-right">' +
-                                            '<a href="" class="dropdown-item" data-table-action="excel">Excel (.xlsx)</a>' +
-                                            '<a href="" class="dropdown-item" data-table-action="csv">CSV (.csv)</a>' +
-                                        '</ul>' +
-                                    '</div>' +
+                                    // REMOVED TABLE ACTION BUTTONS
+                                    // '<span class="actions__item zmdi zmdi-print" data-table-action="print" />' +
+                                    // '<span class="actions__item zmdi zmdi-fullscreen" data-table-action="fullscreen" />' +
+                                    // '<div class="dropdown actions__item">' +
+                                    //     '<i data-toggle="dropdown" class="zmdi zmdi-download" />' +
+                                    //     '<ul class="dropdown-menu dropdown-menu-right">' +
+                                    //         '<a href="" class="dropdown-item" data-table-action="excel">Excel (.xlsx)</a>' +
+                                    //         '<a href="" class="dropdown-item" data-table-action="csv">CSV (.csv)</a>' +
+                                    //     '</ul>' +
+                                    // '</div>' +
                                 '</div>';
 
         // Initiate data-table
@@ -230,7 +231,7 @@ $(document).ready(function () {
     -------------------------------------------------*/
     if($('.wysiwyg-editor')[0]) {
         $('.wysiwyg-editor').trumbowyg({
-            autogrow: true 
+            autogrow: true
         });
     }
 
