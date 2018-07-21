@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { YourWalletComponent } from "./your.wallet.component";
+import { YourWalletComponent } from './your.wallet.component';
 
 export const YourWalletRoutes: Routes = [
   {

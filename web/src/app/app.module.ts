@@ -22,7 +22,7 @@ import { AuthGuard } from './app.auth.guard';
 import { AuthService } from './services/AuthService';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppInterceptor } from './app.interceptor';
-import { YourWalletModule } from "./private/wallet/your.wallet.module";
+import { YourWalletModule } from './private/wallet/your.wallet.module';
 
 @NgModule({
   declarations: [

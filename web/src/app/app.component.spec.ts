@@ -3,10 +3,16 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
+import { AuthService } from './services/AuthService';
+
+declare var particlesJS: any;
 
 describe('AppComponent', () => {
 
   beforeEach(async(() => {
+    const authServiceSpy = new AuthService();
+    spyOn(authServiceSpy, 'isLogged').and.returnValue(true);
+
     TestBed.configureTestingModule({
       imports: [
         FormsModule,
@@ -16,7 +22,12 @@ describe('AppComponent', () => {
         AppComponent
       ],
       providers: [
-        'particlesJS', { useValue: {}}
+        {
+          provide: 'particlesJS', useValue: {} // not working provider
+        },
+        {
+          provide: AuthService, useValue: authServiceSpy
+        }
       ],
       schemas: [
         NO_ERRORS_SCHEMA
@@ -28,13 +39,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  }));
-
-  it('should render title in a h1 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('main').textContent).toBeDefined('Should include main section!');
   }));
 
 });

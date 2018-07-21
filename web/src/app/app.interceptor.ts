@@ -1,9 +1,9 @@
+import { tap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { HttpResponse, HttpErrorResponse, HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { AuthService } from './services/AuthService';
 import { Router } from '@angular/router';
-import 'rxjs/add/operator/do';
 
 @Injectable()
 export class AppInterceptor implements HttpInterceptor {
@@ -15,8 +15,8 @@ export class AppInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const req = this.interceptRequest(request);
 
-    return next.handle(req)
-      .do((event: HttpEvent<any>) => {
+    return next.handle(req).pipe(
+      tap((event: HttpEvent<any>) => {
         if (event instanceof HttpResponse) {
           this.interceptResponse(event);
         }
@@ -24,7 +24,7 @@ export class AppInterceptor implements HttpInterceptor {
         if (err instanceof HttpErrorResponse) {
           this.interceptError(err);
         }
-      });
+      }));
   }
 
   interceptRequest(request: HttpRequest<any>) {
@@ -39,7 +39,7 @@ export class AppInterceptor implements HttpInterceptor {
   interceptError(err: HttpErrorResponse) {
     console.log('intercept response error', err);
 
-    //TODO ADD EXPIRED TOKENS HANDLER
+    // TODO ADD EXPIRED TOKENS HANDLER
 
     if (err.status === 401) {
       this.router.navigate(['/login']);

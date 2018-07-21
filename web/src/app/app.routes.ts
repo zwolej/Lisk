@@ -6,7 +6,7 @@ import { ErrorRoutes } from './public/error/error.routes';
 import { DelegatesRoutes } from './public/delegates/delegates.routes';
 import { LoginRoutes } from './public/login/login.routes';
 import { AuthGuard } from './app.auth.guard';
-import { YourWalletRoutes } from "./private/wallet/your.wallet.routes";
+import { YourWalletRoutes } from './private/wallet/your.wallet.routes';
 
 export const AppRoutes: Routes = [
   {

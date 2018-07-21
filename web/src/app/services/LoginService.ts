@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { PostDto } from './internal/model/PostDto';
 import { HttpService } from './HttpService';
 

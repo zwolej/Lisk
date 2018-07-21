@@ -2,12 +2,10 @@ import { Injectable } from '@angular/core';
 import { WalletResponse } from './lisk/model/WalletResponse';
 import { Router } from '@angular/router';
 import { VotedDelegateResponse } from './lisk/model/VotedDelegateResponse';
-import { Observer } from 'rxjs/Observer';
-import { Observable } from 'rxjs/Observable';
+import { Observer ,  Observable } from 'rxjs';
 import { ErrorService } from './ErrorService';
 import { DelegatesInfoResponse } from './lisk/model/DelegatesInfoResponse';
 import { LiskResponse } from './lisk/model/LiskResponse';
-import 'rxjs/add/operator/map';
 
 declare var lisk: any;
 

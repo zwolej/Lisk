@@ -1,5 +1,5 @@
 import { Inject, Injectable, Optional } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { APP_BASE_HREF } from '@angular/common';
 import { HttpHeaders } from '@angular/common/http/src/headers';
